@@ -1,0 +1,9 @@
+{
+  "add-field": {
+    "name": "unit_price",
+    "type": "string",
+    "required": false,
+    "indexed": true,
+    "stored": true
+  }
+}

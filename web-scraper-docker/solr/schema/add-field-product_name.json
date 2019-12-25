@@ -1,0 +1,9 @@
+{
+  "add-field": {
+    "name": "product_name",
+    "type": "text_ja",
+    "required": true,
+    "indexed": true,
+    "stored": true
+  }
+}

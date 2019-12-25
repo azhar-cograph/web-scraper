@@ -1,0 +1,9 @@
+{
+  "add-field": {
+    "name": "ec_site",
+    "type": "string",
+    "required": true,
+    "indexed": true,
+    "stored": true
+  }
+}

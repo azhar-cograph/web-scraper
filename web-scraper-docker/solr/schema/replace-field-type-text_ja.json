@@ -1,0 +1,43 @@
+{
+  "replace-field-type": {
+    "name": "text_ja",
+    "class": "solr.TextField",
+    "autoGeneratePhraseQueries": "false",
+    "positionIncrementGap": "100",
+    "analyzer": {
+      "charFilters": [
+        {
+          "class": "solr.HTMLStripCharFilterFactory"
+        }
+      ],
+      "tokenizer": {
+        "class": "solr.JapaneseTokenizerFactory",
+        "mode": "search"
+      },
+      "filters": [
+        {
+          "class": "solr.JapaneseBaseFormFilterFactory"
+        },
+        {
+          "class": "solr.JapanesePartOfSpeechStopFilterFactory",
+          "tags": "lang/stoptags_ja.txt"
+        },
+        {
+          "class": "solr.CJKWidthFilterFactory"
+        },
+        {
+          "class": "solr.StopFilterFactory",
+          "words": "lang/stopwords_ja.txt",
+          "ignoreCase": "true"
+        },
+        {
+          "class": "solr.JapaneseKatakanaStemFilterFactory",
+          "minimumLength": "4"
+        },
+        {
+          "class": "solr.LowerCaseFilterFactory"
+        }
+      ]
+    }
+  }
+}

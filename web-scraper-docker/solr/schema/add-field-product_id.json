@@ -1,0 +1,9 @@
+{
+  "add-field": {
+    "name": "product_id",
+    "type": "pint",
+    "required": true,
+    "indexed": true,
+    "stored": true
+  }
+}
